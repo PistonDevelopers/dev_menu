@@ -46,7 +46,7 @@ menu.add_item(dev_menu::MenuItem::slider_item(
 
 To update and render the menu, using the Piston event loop:
 
-```
+```Rust
 for e in window.events() {
 
 	// Send event to menu, with the settings object that should be accessed and/or modified
