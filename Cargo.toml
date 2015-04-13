@@ -9,9 +9,5 @@ git = "https://github.com/PistonDevelopers/piston"
 [dependencies.gfx]
 git = "https://github.com/gfx-rs/gfx-rs"
 
-#FIXME
-[dependencies.gfx_device_gl]
-git = "https://github.com/gfx-rs/gfx_device_gl"
-
 [dependencies.gfx_debug_draw]
 git = "https://github.com/PistonDevelopers/gfx-debug-draw"
