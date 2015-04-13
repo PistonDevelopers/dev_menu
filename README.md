@@ -27,7 +27,7 @@ Items can be added to the menu with `add_item`. An `ActionItem`, when selected, 
 ```Rust
 menu.add_item(dev_menu::MenuItem::action_item(
 	"Toggle Setting A", // Label for the item
-	Box::new( |ref mut settings| { settings.setting_a = !settings.setting_a; }) // Closure to execute
+	Box::new(|ref mut settings| { settings.setting_a = !settings.setting_a; }) // Closure to execute
 ));
 ```
 
@@ -38,8 +38,8 @@ menu.add_item(dev_menu::MenuItem::slider_item(
 	"Setting B = ", // Label for the item. Value will show to the right
 	[-5.0, 5.0], // Valid range for the value
 	0.01, // Value to increment / decrement by on each update, while key is held down
-	Box::new( |ref settings| { settings.setting_b }), // Closure for retrieving value
-	Box::new( |ref mut settings, value| { settings.setting_b = value }), // Closure for setting value
+	Box::new(|ref settings| { settings.setting_b }), // Closure for retrieving value
+	Box::new(|ref mut settings, value| { settings.setting_b = value }), // Closure for setting value
 ));
 ```
 
