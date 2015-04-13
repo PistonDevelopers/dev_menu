@@ -27,7 +27,7 @@ Items can be added to the menu with `add_item`. An `ActionItem`, when selected, 
 ```Rust
 menu.add_item(dev_menu::MenuItem::action_item(
 	"Toggle Setting A", // Label for the item
-        Box::new( |ref mut settings| { settings.setting_a = !settings.setting_a; }) // Closure to execute
+	Box::new( |ref mut settings| { settings.setting_a = !settings.setting_a; }) // Closure to execute
 ));
 ```
 
