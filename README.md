@@ -41,6 +41,7 @@ menu.add_item(dev_menu::MenuItem::slider_item(
 	Box::new( |ref settings| { settings.setting_b }), // Closure for retrieving value
 	Box::new( |ref mut settings, value| { settings.setting_b = value }), // Closure for setting value
 ));
+```
 
 
 To update and render the menu, using the Piston event loop:
