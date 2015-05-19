@@ -31,7 +31,9 @@ impl<T> Menu<T> {
     }
 
     /// Draw the menu using the current settings object
-    pub fn draw<R: gfx::Resources>(&self, settings: &T, debug_renderer: &mut DebugRenderer<R>) {
+    pub fn draw<R, F>(&self, settings: &T, debug_renderer: &mut DebugRenderer<R, F>)
+        where R: gfx::Resources,
+              F: gfx::Factory<R> {
 
         let left_margin = 10;
         let top_margin = 10;
