@@ -11,7 +11,9 @@ pub enum MenuItem<T> {
 }
 
 impl<T> MenuItem<T> {
-    pub fn draw<R: gfx::Resources>(&self, settings: &T, debug_renderer: &mut DebugRenderer<R>, position: [i32; 2], selected: bool) {
+    pub fn draw<R, F>(&self, settings: &T, debug_renderer: &mut DebugRenderer<R, F>, position: [i32; 2], selected: bool)
+        where R: gfx::Resources,
+              F: gfx::Factory<R> {
         match self {
             &MenuItem::ActionItem(ref item) => item.draw(settings, debug_renderer, position, selected),
             &MenuItem::SliderItem(ref item) => item.draw(settings, debug_renderer, position, selected),
@@ -51,7 +53,9 @@ pub struct ActionMenuItem<T> {
 }
 
 impl<T> ActionMenuItem<T> {
-    pub fn draw<R: gfx::Resources>(&self, _settings: &T, debug_renderer: &mut DebugRenderer<R>, position: [i32; 2], selected: bool) {
+    pub fn draw<R, F>(&self, _settings: &T, debug_renderer: &mut DebugRenderer<R, F>, position: [i32; 2], selected: bool)
+        where R: gfx::Resources,
+              F: gfx::Factory<R> {
 
         let color = if selected {
             [1.0, 0.5, 0.5, 1.0]
@@ -94,7 +98,9 @@ pub struct SliderMenuItem<T> {
 
 impl<T> SliderMenuItem<T> {
 
-    pub fn draw<R: gfx::Resources>(&self, settings: &T, debug_renderer: &mut DebugRenderer<R>, position: [i32; 2], selected: bool) {
+    pub fn draw<R, F>(&self, settings: &T, debug_renderer: &mut DebugRenderer<R, F>, position: [i32; 2], selected: bool)
+        where R: gfx::Resources,
+              F: gfx::Factory<R> {
 
         let color = if selected {
             [1.0, 0.5, 0.5, 1.0]
