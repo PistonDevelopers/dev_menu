@@ -1,8 +1,7 @@
 use gfx;
 use gfx_debug_draw::DebugRenderer;
-use piston::event::{GenericEvent, PressEvent};
-use piston::input::keyboard::Key;
-use piston::input::Button::Keyboard;
+use input::{GenericEvent, PressEvent, Key};
+use input::Button::Keyboard;
 
 use menu_item::MenuItem;
 

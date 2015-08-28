@@ -1,6 +1,6 @@
 extern crate gfx;
 extern crate gfx_debug_draw;
-extern crate piston;
+extern crate input;
 
 mod menu;
 mod menu_item;
