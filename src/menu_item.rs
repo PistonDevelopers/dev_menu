@@ -1,8 +1,7 @@
 use gfx;
 use gfx_debug_draw::DebugRenderer;
-use piston::event::{GenericEvent, PressEvent, ReleaseEvent, UpdateEvent};
-use piston::input::keyboard::Key;
-use piston::input::Button::Keyboard;
+use input::{GenericEvent, PressEvent, ReleaseEvent, UpdateEvent, Key};
+use input::Button::Keyboard;
 
 /// A single menu item instance
 pub enum MenuItem<T> {
