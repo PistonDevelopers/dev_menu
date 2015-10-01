@@ -9,6 +9,7 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/PistonDevelopers/dev_menu"
 homepage = "https://github.com/PistonDevelopers/dev_menu"
+documentation = "http://www.piston.rs/docs/dev_menu/dev_menu/"
 
 [dependencies]
 
