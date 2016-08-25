@@ -1,6 +1,6 @@
 use gfx;
 use gfx_debug_draw::DebugRenderer;
-use input::{GenericEvent, PressEvent, Key};
+use input::{GenericEvent, Key};
 use input::Button::Keyboard;
 
 use menu_item::MenuItem;
