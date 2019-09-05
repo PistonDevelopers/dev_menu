@@ -1,7 +1,7 @@
 [package]
 
 name = "dev_menu"
-version = "0.31.0"
+version = "0.32.0"
 authors = ["Steve Jahns <s.t.jahns@gmail.com>"]
 keywords = ["menu", "gfx"]
 description = "A simple in-engine developer menu library."
@@ -15,4 +15,4 @@ documentation = "http://www.piston.rs/docs/dev_menu/dev_menu/"
 
 pistoncore-input = "0.28.0"
 gfx = "0.17.0"
-gfx_debug_draw = "0.24.0"
+gfx_debug_draw = "0.25.0"
