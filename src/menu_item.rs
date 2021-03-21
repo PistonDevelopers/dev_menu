@@ -26,14 +26,14 @@ impl<T> MenuItem<T> {
         }
     }
 
-    pub fn action_item(text: &str, action: Box<Fn(&mut T) -> ()>) -> MenuItem<T> {
+    pub fn action_item(text: &str, action: Box<dyn Fn(&mut T) -> ()>) -> MenuItem<T> {
         MenuItem::ActionItem(ActionMenuItem {
             text: text.to_string(),
             action: action,
         })
     }
 
-    pub fn slider_item(label: &str, range: [f32; 2], step_size: f32, value_getter: Box<Fn(&T) -> f32>, value_setter: Box<Fn(&mut T, f32) -> ()>) -> MenuItem<T> {
+    pub fn slider_item(label: &str, range: [f32; 2], step_size: f32, value_getter: Box<dyn Fn(&T) -> f32>, value_setter: Box<dyn Fn(&mut T, f32) -> ()>) -> MenuItem<T> {
         MenuItem::SliderItem(SliderMenuItem {
             label: label.to_string(),
             range: range,
@@ -48,7 +48,7 @@ impl<T> MenuItem<T> {
 /// Executes a single action callback when spacebar or left/right arrow keys are hit
 pub struct ActionMenuItem<T> {
     text: String,
-    action: Box<Fn(&mut T) -> ()>,
+    action: Box<dyn Fn(&mut T) -> ()>,
 }
 
 impl<T> ActionMenuItem<T> {
@@ -89,8 +89,8 @@ enum SliderMenuState {
 pub struct SliderMenuItem<T> {
     label: String,
     range: [f32; 2],
-    get_value: Box<Fn(&T) -> f32>,
-    set_value: Box<Fn(&mut T, f32) -> ()>,
+    get_value: Box<dyn Fn(&T) -> f32>,
+    set_value: Box<dyn Fn(&mut T, f32) -> ()>,
     step_size: f32,
     state: SliderMenuState,
 }
